@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Feedback Admin | SITARA</title>
+
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/admin.css">
+  <link rel="stylesheet" href="css/modal.css">
+
+</head>
+<body>
+
+<div class="admin-layout">
+
+  <aside class="sidebar">
+
+    <div class="sidebar-brand">
+      SITARA
+    </div>
+
+    <nav class="sidebar-nav">
+
+      <a href="admin-dashboard.html" class="sidebar-link">
+        Dashboard
+      </a>
+
+      <a href="workspace.html" class="sidebar-link">
+        Workspace
+      </a>
+
+      <a href="progress.html" class="sidebar-link">
+        Progress
+      </a>
+
+      <a href="timeline.html" class="sidebar-link">
+        Timeline
+      </a>
+
+      <a href="feedback-admin.html" class="sidebar-link active">
+        Feedback
+      </a>
+
+      <a href="login.html" class="sidebar-link">
+        Logout
+      </a>
+
+    </nav>
+
+  </aside>
+
+  <main class="admin-main">
+
+    <h1 class="page-title">
+      Aspirasi Masyarakat
+    </h1>
+
+    <p class="page-description">
+  Review aspirasi masyarakat dan tindak lanjuti menjadi proyek.
+</p>
+
+<div class="feedback-stats">
+
+  <div class="stat-card primary">
+    <h3 id="total-feedbacks">0</h3>
+    <p>Total Aspirasi</p>
+  </div>
+
+  <div class="stat-card">
+    <h3 id="review-feedbacks">0</h3>
+    <p>Menunggu Review</p>
+  </div>
+
+  <div class="stat-card">
+    <h3 id="rejected-feedbacks">0</h3>
+    <p>Ditolak</p>
+  </div>
+
+  <div class="stat-card">
+    <h3 id="project-feedbacks">0</h3>
+    <p>Menjadi Proyek</p>
+  </div>
+
+</div>
+
+<div id="feedback-container"></div>
+
+  </main>
+
+</div>
+
+<div class="modal-overlay" id="message-modal">
+
+  <div class="modal small-modal">
+
+    <div class="modal-header">
+      <h3 id="modal-title">
+        Konfirmasi
+      </h3>
+    </div>
+
+    <div class="modal-body">
+
+      <p id="modal-message">
+      </p>
+
+    </div>
+
+    <div class="modal-footer">
+
+      <button
+        class="button button-secondary"
+        id="modal-cancel"
+      >
+        Batal
+      </button>
+
+      <button
+        class="button button-primary"
+        id="modal-ok"
+      >
+        OK
+      </button>
+
+    </div>
+
+  </div>
+
+</div>
+
+<script src="js/data.js"></script>
+<script src="js/modal.js"></script>
+<script src="js/feedback.js"></script>
+
+</body>
+</html>

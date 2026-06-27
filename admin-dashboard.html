@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard Admin | SITARA</title>
+
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/admin.css?v=4">
+  <link rel="stylesheet" href="css/modal.css">
+
+</head>
+<body>
+
+<div class="admin-layout">
+
+  <aside class="sidebar">
+
+    <div class="sidebar-brand">
+      SITARA
+    </div>
+
+    <nav class="sidebar-nav">
+
+      <a href="admin-dashboard.html" class="sidebar-link active">
+        Dashboard
+      </a>
+
+      <a href="workspace.html" class="sidebar-link">
+        Workspace
+      </a>
+
+      <a href="progress.html" class="sidebar-link">
+        Progress
+      </a>
+
+      <a href="timeline.html" class="sidebar-link">
+        Timeline
+      </a>
+
+      <a href="feedback-admin.html" class="sidebar-link">
+        Feedback
+      </a>
+
+      <a href="login.html" class="sidebar-link">
+        Logout
+      </a>
+
+    </nav>
+
+    <div class="sidebar-footer">
+      <div class="footer-title">SITARA</div>
+      <div class="footer-version">Version 2.0</div>
+      <div class="footer-copyright">© 2026 Fara Nabila</div>
+    </div>
+
+  </aside>
+
+  <main class="admin-main dashboard-main">
+
+    <header class="dashboard-header">
+      <div class="dashboard-header-left">
+        <h1 class="dashboard-title">Dashboard</h1>
+        <p class="dashboard-subtitle">Kelola dan pantau seluruh sistem SITARA</p>
+      </div>
+      <div class="dashboard-header-right">
+        <a href="feedback-admin.html" class="notification-btn" aria-label="Notifications">
+          <span class="bell-icon">🔔</span>
+          <span class="notification-badge"></span>
+        </a>
+        <div class="admin-profile-dropdown">
+          <div class="profile-info">
+            <span class="profile-avatar">👤</span>
+            <div class="profile-text">
+              <span class="profile-name">Administrator</span>
+              <span class="profile-role">Kelola SITARA</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <div class="page-header dashboard-hero-card">
+      <div class="hero-left-content">
+        <span class="hero-badge">
+          🚧 Workspace SITARA
+        </span>
+        <h1 class="page-title">
+          Kelola Infrastruktur Kota Bandung Dengan Lebih Transparan
+        </h1>
+        <p class="page-description">
+          Pantau proyek pembangunan, aspirasi masyarakat, dan progres pekerjaan dalam satu workspace terpusat.
+        </p>
+        <a href="workspace.html" class="button button-primary hero-button">
+          Mulai Bekerja
+        </a>
+      </div>
+
+      <!-- Infrastructure SVG Illustration -->
+      <div class="hero-illustration">
+        <svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+          <!-- Buildings -->
+          <rect x="50" y="120" width="60" height="150" rx="8" fill="var(--primary)" />
+          <rect x="130" y="80" width="80" height="190" rx="8" fill="var(--primary)" />
+          <rect x="230" y="150" width="70" height="120" rx="8" fill="var(--primary)" />
+          
+          <!-- Building Windows -->
+          <rect x="65" y="140" width="10" height="15" rx="2" fill="white" opacity="0.6"/>
+          <rect x="85" y="140" width="10" height="15" rx="2" fill="white" opacity="0.6"/>
+          <rect x="65" y="170" width="10" height="15" rx="2" fill="white" opacity="0.6"/>
+          <rect x="85" y="170" width="10" height="15" rx="2" fill="white" opacity="0.6"/>
+          
+          <rect x="150" y="100" width="12" height="20" rx="2" fill="white" opacity="0.6"/>
+          <rect x="178" y="100" width="12" height="20" rx="2" fill="white" opacity="0.6"/>
+          <rect x="150" y="135" width="12" height="20" rx="2" fill="white" opacity="0.6"/>
+          <rect x="178" y="135" width="12" height="20" rx="2" fill="white" opacity="0.6"/>
+          <rect x="150" y="170" width="12" height="20" rx="2" fill="white" opacity="0.6"/>
+          <rect x="178" y="170" width="12" height="20" rx="2" fill="white" opacity="0.6"/>
+          
+          <rect x="245" y="170" width="10" height="15" rx="2" fill="white" opacity="0.6"/>
+          <rect x="275" y="170" width="10" height="15" rx="2" fill="white" opacity="0.6"/>
+          <rect x="245" y="200" width="10" height="15" rx="2" fill="white" opacity="0.6"/>
+          <rect x="275" y="200" width="10" height="15" rx="2" fill="white" opacity="0.6"/>
+
+          <!-- Construction Crane -->
+          <path d="M 120 270 L 120 40 M 120 60 L 280 60 M 120 40 L 150 60 M 120 40 L 90 60" stroke="var(--primary)" stroke-width="4" stroke-linecap="round" fill="none" />
+          <line x1="240" y1="60" x2="240" y2="130" stroke="var(--primary)" stroke-width="2" stroke-dasharray="4,4" />
+          <rect x="230" y="130" width="20" height="15" rx="2" fill="var(--primary)" />
+          
+          <!-- Trees -->
+          <circle cx="30" cy="245" r="25" fill="var(--primary-light)" opacity="0.8" />
+          <rect x="27" y="245" width="6" height="30" fill="var(--primary)" />
+          <circle cx="340" cy="250" r="20" fill="var(--primary-light)" opacity="0.8" />
+          <rect x="337" y="250" width="6" height="25" fill="var(--primary)" />
+
+          <!-- Concept Label -->
+          <path d="M 280 80 Q 320 80 320 105 Q 320 130 280 130 Q 270 130 260 140 Q 265 130 250 130 Q 240 130 240 105 Q 240 80 280 80 Z" fill="var(--primary-soft)" opacity="0.8" />
+          <text x="250" y="110" font-family="sans-serif" font-size="12" font-weight="bold" fill="var(--primary)">SITARA v2.0</text>
+        </svg>
+      </div>
+
+      <!-- Generic Administrator Summary Card -->
+      <div class="hero-admin-greeting">
+        <div class="admin-card-header">
+          <span class="admin-avatar">👤</span>
+          <div class="admin-meta">
+            <div class="admin-card-role">Administrator</div>
+            <div class="admin-card-workspace">Workspace SITARA</div>
+          </div>
+        </div>
+        <div class="admin-card-details">
+          <div class="detail-row">
+            <span class="detail-label">Tanggal</span>
+            <span class="detail-value" id="admin-current-date">-</span>
+          </div>
+          <div class="detail-row">
+            <span class="detail-label">Waktu</span>
+            <span class="detail-value" id="admin-current-time">-</span>
+          </div>
+          <div class="detail-row">
+            <span class="detail-label">Status Sistem</span>
+            <span class="detail-value status-online">Online</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <section class="kpi-grid">
+
+      <div class="card kpi-card">
+        <div class="kpi-label">
+          Total Proyek
+        </div>
+
+        <div class="kpi-value" id="total-projects">
+          12
+        </div>
+      </div>
+
+      <div class="card kpi-card">
+        <div class="kpi-label">
+          Proyek Aktif
+        </div>
+
+        <div class="kpi-value" id="active-projects">
+          8
+        </div>
+      </div>
+
+      <div class="card kpi-card">
+        <div class="kpi-label">
+          Selesai
+        </div>
+
+        <div class="kpi-value" id="completed-projects">
+          4
+        </div>
+      </div>
+
+      <div class="card kpi-card">
+        <div class="kpi-label">
+          Aspirasi Masuk
+        </div>
+
+        <div class="kpi-value" id="feedback-count">
+          7
+        </div>
+      </div>
+
+    </section>
+
+    <div class="dashboard-grid">
+      <section class="dashboard-section dashboard-activity-section">
+        <div class="dashboard-section-header">
+          <h2 class="dashboard-section-title">
+            Aktivitas Terbaru
+          </h2>
+        </div>
+        <div id="recent-activities">
+          <p>
+            Belum ada aktivitas.
+          </p>
+        </div>
+      </section>
+
+      <section class="dashboard-section dashboard-status-section">
+        <h2 class="dashboard-section-title">Status Proyek</h2>
+        <div class="status-overview">
+          <span class="badge">Perencanaan: 0</span>
+          <span class="badge">Pelaksanaan: 0</span>
+          <span class="badge">Pengawasan: 0</span>
+          <span class="badge">Selesai: 0</span>
+        </div>
+      </section>
+    </div>
+
+  </main>
+
+</div>
+
+<script src="js/data.js"></script>
+<script src="js/modal.js"></script>
+<script src="js/admin.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    function updateAdminCardTime() {
+      var dateElement = document.getElementById("admin-current-date");
+      var timeElement = document.getElementById("admin-current-time");
+      var now = new Date();
+      
+      if (dateElement) {
+        var dateOptions = { weekday: 'long', day: 'numeric', month: 'long', year: 'numeric' };
+        dateElement.textContent = now.toLocaleDateString('id-ID', dateOptions);
+      }
+      if (timeElement) {
+        var timeOptions = { hour: '2-digit', minute: '2-digit' };
+        timeElement.textContent = now.toLocaleTimeString('id-ID', timeOptions).replace(/\./g, ':') + ' WIB';
+      }
+    }
+    
+    updateAdminCardTime();
+    setInterval(updateAdminCardTime, 1000);
+  });
+</script>
+
+</body>
+</html>

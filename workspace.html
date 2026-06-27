@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Workspace | SITARA</title>
+
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/admin.css">
+  <link rel="stylesheet" href="css/modal.css">
+   
+</head>
+<body>
+
+<div class="admin-layout">
+
+  <aside class="sidebar">
+
+    <div class="sidebar-brand">
+      SITARA
+    </div>
+
+    <nav class="sidebar-nav">
+
+      <a href="admin-dashboard.html" class="sidebar-link">
+        Dashboard
+      </a>
+
+      <a href="workspace.html" class="sidebar-link active">
+        Workspace
+      </a>
+
+      <a href="progress.html" class="sidebar-link">
+        Progress
+      </a>
+
+      <a href="timeline.html" class="sidebar-link">
+        Timeline
+      </a>
+
+      <a href="feedback-admin.html" class="sidebar-link">
+        Feedback
+      </a>
+
+      <a href="login.html" class="sidebar-link">
+        Logout
+      </a>
+
+    </nav>
+
+  </aside>
+
+  <main class="admin-main">
+
+    <div class="top-bar">
+
+      <div>
+
+        <h1 class="page-title">
+          Workspace
+        </h1>
+
+        <p class="page-description">
+          Kelola seluruh proyek infrastruktur Kota Bandung.
+        </p>
+
+      </div>
+
+      <div class="top-bar-right">
+
+        <button
+          class="button button-primary"
+          id="add-project-btn"
+        >
+          + Tambah Proyek
+        </button>
+
+      </div>
+
+    </div>
+
+    <div class="board">
+
+      <div class="board-column">
+
+        <div class="board-title">
+          Perencanaan
+        </div>
+
+        <div id="planning-board"></div>
+
+      </div>
+
+      <div class="board-column">
+
+        <div class="board-title">
+          Pelaksanaan
+        </div>
+
+        <div id="running-board"></div>
+
+      </div>
+
+      <div class="board-column">
+
+        <div class="board-title">
+          Pengawasan
+        </div>
+
+        <div id="monitoring-board"></div>
+
+      </div>
+
+      <div class="board-column">
+
+        <div class="board-title">
+          Selesai
+        </div>
+
+        <div id="completed-board"></div>
+
+      </div>
+
+    </div>
+
+  </main>
+
+</div>
+
+<div class="modal-overlay" id="message-modal">
+
+  <div class="modal small-modal">
+
+    <div class="modal-header">
+      <h3 id="modal-title">
+        Konfirmasi
+      </h3>
+    </div>
+
+    <div class="modal-body">
+
+      <p id="modal-message">
+      </p>
+
+    </div>
+
+    <div class="modal-footer">
+
+      <button
+        class="button button-secondary"
+        id="modal-cancel"
+      >
+        Batal
+      </button>
+
+      <button
+        class="button button-primary"
+        id="modal-ok"
+      >
+        OK
+      </button>
+
+    </div>
+
+  </div>
+
+</div>
+
+<div
+  class="modal-overlay"
+  id="project-modal"
+>
+
+  <div class="modal">
+
+    <div class="modal-header">
+      <h3>Tambah Proyek Baru</h3>
+    </div>
+
+    <div class="modal-body">
+
+      <div class="input-group">
+        <label>Nama Proyek</label>
+        <input
+          type="text"
+          id="new-project-name"
+        >
+      </div>
+
+      <div class="input-group">
+        <label>Lokasi</label>
+        <input
+          type="text"
+          id="new-project-location"
+        >
+      </div>
+
+      <div class="input-group">
+        <label>Tanggal Mulai</label>
+        <input
+          type="date"
+          id="new-project-start"
+        >
+      </div>
+
+      <div class="input-group">
+        <label>Target Selesai</label>
+        <input
+          type="date"
+          id="new-project-target"
+        >
+      </div>
+
+      <div class="input-group">
+        <label>Deskripsi</label>
+        <textarea
+          id="new-project-description"
+        ></textarea>
+      </div>
+
+    </div>
+
+    <div class="modal-footer">
+
+      <button
+        class="button button-secondary"
+        id="close-project-modal"
+      >
+        Batal
+      </button>
+
+      <button
+        class="button button-primary"
+        id="save-new-project"
+      >
+        Simpan
+      </button>
+
+    </div>
+
+  </div>
+
+</div>
+
+<script src="js/data.js"></script>
+<script src="js/modal.js"></script>
+<script src="js/admin.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aspirasi Masyarakat | SITARA</title>
+
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/public.css">
+</head>
+<body>
+
+  <header class="public-header">
+    <div class="container public-nav">
+      <a href="index.html" class="public-brand">
+        SITARA
+      </a>
+
+      <nav class="public-menu">
+        <a href="index.html">Beranda</a>
+        <a href="projects.html">Proyek</a>
+        <a href="aspirasi.html" class="active">Aspirasi</a>
+        <a href="login.html">Admin</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="public-page">
+    <section class="container">
+      <div class="page-header public-page-header">
+        <h1 class="page-title">
+          Aspirasi Masyarakat
+        </h1>
+
+        <p class="page-description">
+          Sampaikan aspirasi terkait infrastruktur agar dapat ditinjau oleh admin SITARA.
+        </p>
+      </div>
+
+      <form class="public-form-card" id="aspiration-form">
+        <div class="public-form-grid">
+          <div class="input-group">
+            <label for="feedback-name">Nama</label>
+            <input
+              type="text"
+              id="feedback-name"
+              required
+            >
+          </div>
+
+          <div class="input-group">
+            <label for="feedback-location">Lokasi</label>
+            <input
+              type="text"
+              id="feedback-location"
+              required
+            >
+          </div>
+
+          <div class="input-group">
+            <label for="feedback-category">Kategori</label>
+            <select id="feedback-category" required>
+              <option value="">Pilih Kategori</option>
+              <option value="Trotoar">Trotoar</option>
+              <option value="Drainase">Drainase</option>
+              <option value="Jalan">Jalan</option>
+              <option value="Jembatan">Jembatan</option>
+              <option value="Penerangan">Penerangan</option>
+              <option value="Lainnya">Lainnya</option>
+            </select>
+          </div>
+
+          <div class="input-group">
+            <label for="feedback-title">Judul Aspirasi</label>
+            <input
+              type="text"
+              id="feedback-title"
+              required
+            >
+          </div>
+
+          <div class="input-group public-form-full">
+            <label for="feedback-description">Deskripsi</label>
+            <textarea
+              id="feedback-description"
+              rows="6"
+              required
+            ></textarea>
+          </div>
+
+          <div class="input-group public-form-full">
+            <label for="feedback-photo">Upload Foto Opsional</label>
+            <input
+              type="file"
+              id="feedback-photo"
+              accept="image/*"
+            >
+          </div>
+        </div>
+
+        <div class="public-form-actions">
+          <button type="submit" class="button button-primary">
+            Kirim Aspirasi
+          </button>
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <footer class="public-footer-section">
+    <div class="container public-footer-grid">
+      <div class="footer-brand-col">
+        <a href="index.html" class="footer-brand">SITARA</a>
+        <p class="footer-description">
+          Sistem Transparansi Infrastruktur dan Aspirasi Masyarakat Kota Bandung
+        </p>
+      </div>
+
+      <div class="footer-menu-col">
+        <h3 class="footer-title">Menu</h3>
+        <ul class="footer-links">
+          <li><a href="index.html">Beranda</a></li>
+          <li><a href="projects.html">Proyek</a></li>
+          <li><a href="aspirasi.html">Aspirasi</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-contact-col">
+        <h3 class="footer-title">Kontak</h3>
+        <ul class="footer-contact-info">
+          <li>📧 <a href="mailto:sitara@bandung.go.id">sitara@bandung.go.id</a></li>
+          <li>📍 <span>Kota Bandung</span></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container footer-bottom-content">
+        <div class="footer-credit">
+          Designed & Developed by <span class="credit-name">Fara Nabila</span>
+        </div>
+        <p class="footer-copy">&copy; 2026 SITARA. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <div class="public-modal-overlay" id="public-confirm-modal">
+    <div class="public-modal">
+      <h2>
+        Konfirmasi Pengiriman
+      </h2>
+
+      <p>
+        Apakah data aspirasi yang Anda masukkan sudah benar? Aspirasi akan dikirim kepada admin SITARA untuk ditinjau.
+      </p>
+
+      <div class="public-form-actions">
+        <button class="button button-secondary" id="public-confirm-cancel">
+          Batal
+        </button>
+
+        <button class="button button-primary" id="public-confirm-submit">
+          Kirim Aspirasi
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div class="public-modal-overlay" id="public-success-modal">
+    <div class="public-modal">
+      <h2>
+        Aspirasi Berhasil Dikirim
+      </h2>
+
+      <p>
+        Terima kasih. Aspirasi Anda telah berhasil dikirim dan sedang menunggu tinjauan admin.
+      </p>
+
+      <button class="button button-primary" id="public-modal-ok">
+        OK
+      </button>
+    </div>
+  </div>
+
+  <script src="js/data.js?v=2"></script>
+  <script src="js/public.js?v=2"></script>
+
+</body>
+</html>

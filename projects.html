@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Daftar Proyek | SITARA</title>
+
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/public.css">
+</head>
+<body>
+
+  <header class="public-header">
+    <div class="container public-nav">
+      <a href="index.html" class="public-brand">
+        SITARA
+      </a>
+
+      <nav class="public-menu">
+        <a href="index.html">Beranda</a>
+        <a href="projects.html" class="active">Proyek</a>
+        <a href="aspirasi.html">Aspirasi</a>
+        <a href="login.html">Admin</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="public-page">
+    <section class="container">
+      <div class="page-header public-page-header">
+        <h1 class="page-title">
+          Daftar Proyek
+        </h1>
+
+        <p class="page-description">
+          Telusuri seluruh proyek infrastruktur yang tercatat di SITARA.
+        </p>
+      </div>
+
+      <div class="public-toolbar">
+        <div class="input-group public-search">
+          <label for="project-search">Search Proyek</label>
+          <input
+            type="search"
+            id="project-search"
+            placeholder="Cari nama atau lokasi proyek"
+          >
+        </div>
+
+        <div class="input-group public-filter">
+          <label for="status-filter">Filter Status</label>
+          <select id="status-filter">
+            <option value="">Semua Status</option>
+            <option value="Perencanaan">Perencanaan</option>
+            <option value="Pelaksanaan">Pelaksanaan</option>
+            <option value="Pengawasan">Pengawasan</option>
+            <option value="Selesai">Selesai</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="public-project-grid" id="public-project-list"></div>
+    </section>
+  </main>
+
+  <footer class="public-footer-section">
+    <div class="container public-footer-grid">
+      <div class="footer-brand-col">
+        <a href="index.html" class="footer-brand">SITARA</a>
+        <p class="footer-description">
+          Sistem Transparansi Infrastruktur dan Aspirasi Masyarakat Kota Bandung
+        </p>
+      </div>
+
+      <div class="footer-menu-col">
+        <h3 class="footer-title">Menu</h3>
+        <ul class="footer-links">
+          <li><a href="index.html">Beranda</a></li>
+          <li><a href="projects.html">Proyek</a></li>
+          <li><a href="aspirasi.html">Aspirasi</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-contact-col">
+        <h3 class="footer-title">Kontak</h3>
+        <ul class="footer-contact-info">
+          <li>📧 <a href="mailto:sitara@bandung.go.id">sitara@bandung.go.id</a></li>
+          <li>📍 <span>Kota Bandung</span></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container footer-bottom-content">
+        <div class="footer-credit">
+          Designed & Developed by <span class="credit-name">Fara Nabila</span>
+        </div>
+        <p class="footer-copy">&copy; 2026 SITARA. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/data.js"></script>
+  <script src="js/public.js"></script>
+
+</body>
+</html>

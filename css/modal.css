@@ -1,0 +1,86 @@
+
+.modal-overlay{
+  position:fixed;
+  inset:0;
+  background:rgba(15,23,42,.45);
+
+  display:none;
+  justify-content:center;
+  align-items:center;
+
+  z-index:9999;
+}
+
+.modal-overlay.active{
+  display:flex;
+}
+
+.modal{
+  width:600px;
+  max-width:90%;
+
+  background:white;
+
+  border-radius:24px;
+
+  padding:24px;
+
+  box-shadow:
+  0 20px 60px rgba(0,0,0,.15);
+}
+
+.modal-header{
+  margin-bottom:20px;
+}
+
+.modal-body{
+  display:flex;
+  flex-direction:column;
+  gap:16px;
+}
+
+.modal-footer{
+  margin-top:24px;
+
+  display:flex;
+  justify-content:flex-end;
+  gap:12px;
+}
+
+.small-modal{
+  width:420px;
+}
+
+#modal-message{
+  font-size:15px;
+  line-height:1.6;
+}
+
+#message-modal{
+  z-index:10000;
+}
+
+#project-modal{
+  z-index:9999;
+}
+
+/* Modal SaaS redesign */
+.modal-overlay {
+backdrop-filter: blur(8px);
+background: rgba(15, 23, 42, 0.42);
+}
+
+.modal {
+border-radius: 28px;
+border: 1px solid rgba(226, 232, 240, 0.75);
+box-shadow: var(--shadow-md);
+padding: 28px;
+}
+
+.modal-header h3 {
+font-size: 1.3rem;
+}
+
+.modal-footer .button {
+border-radius: 14px;
+}

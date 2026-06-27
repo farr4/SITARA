@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SITARA | Transparansi Infrastruktur</title>
+
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/public.css">
+  <link rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link
+    rel="stylesheet"
+    href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+  >
+</head>
+<body>
+
+  <header class="public-header">
+    <div class="container public-nav">
+      <a href="index.html" class="public-brand">
+        SITARA
+      </a>
+
+      <nav class="public-menu">
+        <a href="index.html" class="active">Beranda</a>
+        <a href="projects.html">Proyek</a>
+        <a href="aspirasi.html">Aspirasi</a>
+        <a href="login.html">Admin</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+  <section class="public-hero">
+    <div class="container">
+
+        <div class="hero-content">
+
+            <div class="hero-copy">
+
+                <span class="hero-eyebrow">
+                    Kota Bandung
+                </span>
+
+                <h1>
+                    Transparansi proyek infrastruktur dan aspirasi masyarakat.
+                </h1>
+
+                <p>
+                    Pantau status proyek, progres pelaksanaan, dan jumlah aspirasi yang masuk melalui sistem SITARA.
+                </p>
+
+                <div class="hero-actions">
+                    <a href="projects.html" class="button button-primary">
+                        Lihat Proyek
+                    </a>
+
+                    <a href="aspirasi.html" class="button button-secondary">
+                        Kirim Aspirasi
+                    </a>
+                </div>
+
+            </div>
+
+            <div class="hero-summary">
+
+                <div class="hero-stat-card">
+                    <span class="hero-number" id="public-total-projects">0</span>
+                    <span class="hero-label">Total Proyek</span>
+                </div>
+
+                <div class="hero-stat-card">
+                    <span class="hero-number" id="public-completed-projects">0</span>
+                    <span class="hero-label">Proyek Selesai</span>
+                </div>
+
+                <div class="hero-stat-card">
+                    <span class="hero-number" id="public-feedback-count">0</span>
+                    <span class="hero-label">Aspirasi Masuk</span>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+    <section class="features-section">
+    <div class="container">
+        <div class="section-header">
+            <span class="section-badge">Keunggulan SITARA</span>
+            <h2>Mengapa menggunakan SITARA?</h2>
+            <p>
+                Platform transparansi infrastruktur yang membantu masyarakat
+                memantau proyek pembangunan dan menyampaikan aspirasi secara
+                lebih mudah.
+            </p>
+        </div>
+
+        <div class="features-grid">
+            <div class="feature-card">
+              <div class="feature-icon">
+                  <i class="fa-solid fa-map-location-dot"></i>
+              </div>
+              <h3>Lihat Proyek</h3>
+              <p>
+                  Lihat lokasi proyek secara langsung melalui peta interaktif dan informasi proyek yang selalu diperbarui.
+              </p>
+              <a href="projects.html" class="feature-link">
+                  Lihat Proyek →
+              </a>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fa-solid fa-chart-line"></i>
+                </div>
+                <h3>Pantau Progress</h3>
+                <p>
+                    Pantau perkembangan proyek mulai dari tahap perencanaan
+                    hingga selesai melalui progress yang ditampilkan secara
+                    terbuka.
+                </p>
+                <a href="projects.html" class="feature-link">
+                    Pantau Progress →
+                </a>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fa-solid fa-comments"></i>
+                </div>
+                <h3>Kirim Aspirasi</h3>
+                <p>
+                    Sampaikan laporan atau masukan terkait infrastruktur agar
+                    dapat ditinjau dan ditindaklanjuti oleh admin.
+                </p>
+                <a href="aspirasi.html" class="feature-link">
+                    Kirim Aspirasi →
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <section class="section public-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-badge">Monitoring</span>
+          <h2>Peta Proyek</h2>
+          <p>Sebaran proyek pembangunan yang sedang berjalan di Kota Bandung.</p>
+        </div>
+
+        <div class="map-card">
+          <div class="map-live">
+            <span class="dot"></span>
+            Live Data
+          </div>
+          <div id="project-map"></div>
+          <div class="map-legend">
+            <span>
+              <i class="legend-blue"></i>
+              Semua Proyek
+            </span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section public-section-tight" id="proyek-terbaru">
+      <div class="container">
+        <div class="projects-header">
+          <div class="projects-header-left">
+            <span class="section-badge">Proyek</span>
+            <h2>Proyek Terbaru</h2>
+            <p>Pantau perkembangan proyek pembangunan terbaru yang tercatat pada sistem SITARA.</p>
+          </div>
+          <a href="projects.html" class="view-all-button">Lihat Semua →</a>
+        </div>
+        <div class="projects-grid" id="latest-projects"></div>
+      </div>
+    </section>
+
+    <section class="section public-section-tight" id="aspirasi-terbaru">
+      <div class="container">
+        <div class="projects-header">
+          <div class="projects-header-left">
+            <span class="section-badge">Aspirasi</span>
+            <h2>Aspirasi Terbaru</h2>
+            <p>Aspirasi masyarakat terbaru beserta status tinjauan dari admin.</p>
+          </div>
+          <a href="aspirasi.html" class="view-all-button">Kirim Aspirasi →</a>
+        </div>
+        <div class="public-feedback-grid" id="latest-feedbacks"></div>
+      </div>
+    </section>
+
+    <section class="public-cta">
+      <div class="container public-cta-content">
+        <h2>
+          Punya aspirasi terkait infrastruktur?
+        </h2>
+
+        <a href="aspirasi.html" class="button button-primary">
+          Kirim Aspirasi
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="public-footer-section">
+    <div class="container public-footer-grid">
+      <div class="footer-brand-col">
+        <a href="index.html" class="footer-brand">SITARA</a>
+        <p class="footer-description">
+          Sistem Transparansi Infrastruktur dan Aspirasi Masyarakat Kota Bandung
+        </p>
+      </div>
+
+      <div class="footer-menu-col">
+        <h3 class="footer-title">Menu</h3>
+        <ul class="footer-links">
+          <li><a href="index.html">Beranda</a></li>
+          <li><a href="projects.html">Proyek</a></li>
+          <li><a href="aspirasi.html">Aspirasi</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-contact-col">
+        <h3 class="footer-title">Kontak</h3>
+        <ul class="footer-contact-info">
+          <li>📧 <a href="mailto:sitara@bandung.go.id">sitara@bandung.go.id</a></li>
+          <li>📍 <span>Kota Bandung</span></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container footer-bottom-content">
+        <div class="footer-credit">
+          Designed & Developed by <span class="credit-name">Fara Nabila</span>
+        </div>
+        <p class="footer-copy">&copy; 2026 SITARA. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/data.js?v=2"></script>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="js/public.js?v=2"></script>
+
+</body>
+</html>
