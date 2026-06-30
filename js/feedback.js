@@ -97,13 +97,7 @@ function renderFeedbacks() {
         </div>
 
         <div class="feedback-photo">
-
-          ${
-            item.photo
-            ? `<img src="${item.photo}" width="100%">`
-            : "Belum Ada Foto"
-          }
-
+          <img src="${item.photo || 'assets/images/default-placeholder.jpg'}" width="100%" onerror="this.onerror=null; this.src='assets/images/default-placeholder.jpg';">
         </div>
 
         <p>

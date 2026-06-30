@@ -337,37 +337,18 @@ function logProjectDetailChanges(previousProject, project){
 }
 
 function createProjectPhotoPreview(project){
-
-  if(project.photo){
-
-    return (
-      '<div class="project-photo-card">' +
-        '<img ' +
-          'class="project-photo-preview" ' +
-          'id="project-photo-preview" ' +
-          'src="' +
-          project.photo +
-          '" ' +
-          'data-photo="' +
-          project.photo +
-        '">' +
-      '</div>'
-    );
-
-  }
-
+  var photoSrc = project.photo || 'assets/images/default-placeholder.jpg';
   return (
     '<div class="project-photo-card">' +
-      '<div ' +
-        'class="project-photo-placeholder" ' +
+      '<img ' +
+        'class="project-photo-preview" ' +
         'id="project-photo-preview" ' +
-        'data-photo=""' +
+        'src="' + photoSrc + '" ' +
+        'data-photo="' + (project.photo || '') + '" ' +
+        'onerror="this.onerror=null; this.src=\'assets/images/default-placeholder.jpg\';"' +
       '>' +
-        'Belum ada foto proyek' +
-      '</div>' +
     '</div>'
   );
-
 }
 
 function setupPhotoPreview(){
